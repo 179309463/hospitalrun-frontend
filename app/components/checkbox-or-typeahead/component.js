@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SelectOrTypeahead from 'hospitalrun/components/select-or-typeahead';
+import SelectOrTypeahead from 'hospitalrun/components/select-or-typeahead/component';
 export default SelectOrTypeahead.extend({
   checkboxesPerRow: 5,
   model: null,

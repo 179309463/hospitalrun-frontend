@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import PatientName from 'hospitalrun/mixins/patient-name';
-import TypeAhead from 'hospitalrun/components/type-ahead';
+import TypeAhead from 'hospitalrun/components/type-ahead/component';
 export default TypeAhead.extend(PatientName, {
   displayKey: 'name',
   setOnBlur: true,

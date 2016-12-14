@@ -1,4 +1,4 @@
-import TypeAhead from 'hospitalrun/components/type-ahead';
+import TypeAhead from 'hospitalrun/components/type-ahead/component';
 export default TypeAhead.extend({
   class: 'scrollable-typeahead',
   minlength: 2,

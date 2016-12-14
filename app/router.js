@@ -10,7 +10,7 @@ Router.map(function() {
 
   this.route('finishgauth', { path: '/finishgauth/:s1/:s2/:k/:t/:i/:p' });
   this.route('index', { path: '/' });
-  this.route('login');  
+  this.route('login');
 
   this.route('hospital', function() {
 
@@ -94,7 +94,7 @@ Router.map(function() {
     });
 
   });
-  
+
 });
 
 export default Router;

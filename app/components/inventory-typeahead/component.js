@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import TypeAhead from 'hospitalrun/components/type-ahead';
+import TypeAhead from 'hospitalrun/components/type-ahead/component';
 export default TypeAhead.extend({
   classNameBindings: ['haveInventoryItems'],
   displayKey: 'name',
