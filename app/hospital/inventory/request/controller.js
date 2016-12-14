@@ -5,7 +5,7 @@ import InventorySelection from 'hospitalrun/mixins/inventory-selection';
 import Ember from 'ember';
 
 export default AbstractEditController.extend(FulfillRequest, InventoryLocations, InventorySelection, {
-  inventoryController: Ember.inject.controller('inventory'),
+  inventoryController: Ember.inject.controller('hospital/inventory'),
   inventoryItems: null,
   cancelAction: 'allRequests',
 
@@ -109,7 +109,7 @@ export default AbstractEditController.extend(FulfillRequest, InventoryLocations,
     },
 
     allRequests() {
-      this.transitionToRoute('inventory.index');
+      this.transitionToRoute('hospital.inventory.index');
     },
 
     removeItem(removeInfo) {

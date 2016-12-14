@@ -5,7 +5,7 @@ export default AbstractEditController.extend({
   cancelAction: 'closeModal',
   newCharge: false,
   newPricingItem: false,
-  requestingController: Ember.inject.controller('procedures/edit'),
+  requestingController: Ember.inject.controller('hospital/visits/procedures/edit'),
   database: Ember.inject.service(),
   pricingList: Ember.computed.alias('requestingController.pricingList'),
   selectedItem: null,

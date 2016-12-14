@@ -10,7 +10,7 @@ export default AbstractModuleRoute.extend({
     findArgs: ['lookup', 'radiologists']
   }],
   allowSearch: false,
-  moduleName: 'imaging',
+  moduleName: 'hospital.imaging',
   newButtonText: t('imaging.buttons.newButton'),
   sectionTitle: t('imaging.sectionTitle')
 });

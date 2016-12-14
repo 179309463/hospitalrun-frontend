@@ -8,7 +8,7 @@ export default AbstractModuleRoute.extend(UserSession, {
   currentScreenTitle: t('appointments.currentScreenTitle'),
   editTitle: t('appointments.editTitle'),
   newTitle: t('appointments.newTitle'),
-  moduleName: 'appointments',
+  moduleName: 'hospital.appointments',
   newButtonText: t('appointments.buttons.newButton'),
   sectionTitle: t('appointments.sectionTitle'),
 
@@ -17,7 +17,7 @@ export default AbstractModuleRoute.extend(UserSession, {
       let visitProps = appointment.getProperties('startDate', 'endDate', 'location', 'patient');
       visitProps.visitType = appointment.get('appointmentType');
       visitProps.examiner = appointment.get('provider');
-      this.transitionTo('visits.edit', 'new').then(function(newRoute) {
+      this.transitionTo('hospital.visits.edit', 'new').then(function(newRoute) {
         newRoute.currentModel.setProperties(visitProps);
       }.bind(this));
     }

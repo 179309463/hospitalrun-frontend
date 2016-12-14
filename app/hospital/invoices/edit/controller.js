@@ -7,7 +7,7 @@ import SelectValues from 'hospitalrun/utils/select-values';
 import uuid from 'npm:uuid';
 
 export default AbstractEditController.extend(NumberFormat, PatientSubmodule, PublishStatuses, {
-  invoiceController: Ember.inject.controller('invoices'),
+  invoiceController: Ember.inject.controller('hospital/invoices'),
   expenseAccountList: Ember.computed.alias('invoiceController.expenseAccountList.value'),
   patientList: Ember.computed.alias('invoiceController.patientList'),
   pharmacyCharges: [],
@@ -103,7 +103,7 @@ export default AbstractEditController.extend(NumberFormat, PatientSubmodule, Pub
     },
 
     printInvoice() {
-      this.transitionToRoute('print.invoice', this.get('model'));
+      this.transitionToRoute('hospital.print.invoice', this.get('model'));
     },
 
     removePayment(removeInfo) {
@@ -119,7 +119,7 @@ export default AbstractEditController.extend(NumberFormat, PatientSubmodule, Pub
       let newLineItem = this.store.createRecord('billing-line-item', {
         id: uuid.v4()
       });
-      this.send('openModal', 'invoices.add-line-item', newLineItem);
+      this.send('openModal', 'hospital.invoices.add-line-item', newLineItem);
     },
 
     showDeleteItem(itemToDelete, deleteFrom) {

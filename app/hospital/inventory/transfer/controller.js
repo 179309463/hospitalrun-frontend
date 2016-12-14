@@ -2,7 +2,7 @@ import AbstractEditController from 'hospitalrun/controllers/abstract-edit-contro
 import Ember from 'ember';
 import { translationMacro as t } from 'ember-i18n';
 export default AbstractEditController.extend({
-  inventoryController: Ember.inject.controller('inventory'),
+  inventoryController: Ember.inject.controller('hospital/inventory'),
 
   warehouseList: Ember.computed.alias('inventoryController.warehouseList'),
   aisleLocationList: Ember.computed.alias('inventoryController.aisleLocationList'),

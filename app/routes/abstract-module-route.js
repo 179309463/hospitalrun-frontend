@@ -34,6 +34,7 @@ export default Ember.Route.extend(UserSession, AuthenticatedRouteMixin, {
 
   searchRoute: function() {
     let module = this.get('moduleName');
+    module = module.split('.').join('/');
     return `/${module}/search`;
   }.property('moduleName'),
 

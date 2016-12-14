@@ -1,10 +1,10 @@
-import AppointmentIndexRoute from 'hospitalrun/appointments/index/route';
+import AppointmentIndexRoute from 'hospitalrun/hospital/appointments/index/route';
 import DateFormat from 'hospitalrun/mixins/date-format';
 import Ember from 'ember';
 import { translationMacro as t } from 'ember-i18n';
 
 export default AppointmentIndexRoute.extend(DateFormat, {
-  editReturn: 'appointments.search',
+  editReturn: 'hospital.appointments.search',
   filterParams: ['appointmentType', 'provider', 'status'],
   modelName: 'appointment',
   pageTitle: t('appointments.searchTitle'),

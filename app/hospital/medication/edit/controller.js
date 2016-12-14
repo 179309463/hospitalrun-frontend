@@ -8,7 +8,7 @@ import PatientSubmodule from 'hospitalrun/mixins/patient-submodule';
 import UserSession from 'hospitalrun/mixins/user-session';
 
 export default AbstractEditController.extend(InventorySelection, FulfillRequest, InventoryLocations, PatientId, PatientSubmodule, UserSession, {
-  medicationController: Ember.inject.controller('medication'),
+  medicationController: Ember.inject.controller('hospital/medication'),
   newPatientId: null,
 
   expenseAccountList: Ember.computed.alias('medicationController.expenseAccountList'),
@@ -106,7 +106,7 @@ export default AbstractEditController.extend(InventorySelection, FulfillRequest,
         patientDetails.firstName = patientTypeAhead;
       }
       patient = this.store.createRecord('patient', patientDetails);
-      this.send('openModal', 'patients.quick-add', patient);
+      this.send('openModal', 'hospital.patients.quick-add', patient);
     }.bind(this));
   },
 

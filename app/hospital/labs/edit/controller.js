@@ -4,9 +4,9 @@ import Ember from 'ember';
 import PatientSubmodule from 'hospitalrun/mixins/patient-submodule';
 
 export default AbstractEditController.extend(ChargeActions, PatientSubmodule, {
-  labsController: Ember.inject.controller('labs'),
+  labsController: Ember.inject.controller('hospital/labs'),
   chargePricingCategory: 'Lab',
-  chargeRoute: 'labs.charge',
+  chargeRoute: 'hospital.labs.charge',
   selectedLabType: null,
 
   canComplete: function() {

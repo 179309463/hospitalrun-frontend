@@ -189,7 +189,7 @@ export default Ember.Mixin.create({
           this.send('closeModal');
         }
         if (!skipTransition) {
-          this.transitionTo('inventory.index');
+          this.transitionTo('hospital.inventory.index');
         }
       }.bind(this));
     }.bind(this));

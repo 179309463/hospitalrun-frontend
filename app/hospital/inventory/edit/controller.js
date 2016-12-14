@@ -7,7 +7,7 @@ import UnitTypes from 'hospitalrun/mixins/unit-types';
 import UserSession from 'hospitalrun/mixins/user-session';
 
 export default AbstractEditController.extend(InventoryLocations, InventoryTypeList, ReturnTo, UnitTypes, UserSession, {
-  inventory: Ember.inject.controller(),
+  inventory: Ember.inject.controller('hospital/inventory'),
   savingNewItem: false,
 
   canAddPurchase: function() {
@@ -134,14 +134,14 @@ export default AbstractEditController.extend(InventoryLocations, InventoryTypeLi
         transferItem: null,
         transactionType: 'Adjustment (Add)'
       });
-      this.send('openModal', 'inventory.adjust', inventoryLocation);
+      this.send('openModal', 'hospital.inventory.adjust', inventoryLocation);
     },
 
     showTransfer(inventoryLocation) {
       inventoryLocation.set('adjustmentQuantity');
       inventoryLocation.set('transferItem', this.get('model'));
       inventoryLocation.set('dateCompleted', new Date());
-      this.send('openModal', 'inventory.transfer', inventoryLocation);
+      this.send('openModal', 'hospital.inventory.transfer', inventoryLocation);
     },
 
     transferItems(inventoryLocation) {

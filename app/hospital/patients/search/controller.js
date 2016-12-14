@@ -1,2 +1,2 @@
-import PatientListingController from 'hospitalrun/patients/index/controller';
+import PatientListingController from 'hospitalrun/hospital/patients/index/controller';
 export default PatientListingController.extend();

@@ -50,11 +50,11 @@ export default AbstractModuleRoute.extend(PatientId, {
       }
       propertiesToSet.patient = patient;
 
-      this.transitionTo('visits.edit', 'new').then(function(newRoute) {
+      this.transitionTo('hospital.visits.edit', 'new').then(function(newRoute) {
         newRoute.currentModel.setProperties(propertiesToSet);
       }.bind(this));
     }
   },
   newButtonText: t('patients.buttons.newPatient'),
-  moduleName: 'patients'
+  moduleName: 'hospital.patients'
 });

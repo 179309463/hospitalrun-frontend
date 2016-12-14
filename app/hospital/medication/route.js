@@ -3,7 +3,7 @@ import AbstractModuleRoute from 'hospitalrun/routes/abstract-module-route';
 import Ember from 'ember';
 export default AbstractModuleRoute.extend({
   addCapability: 'add_medication',
-  moduleName: 'medication',
+  moduleName: 'hospital.medication',
   newButtonText: t('medication.buttons.newButton'),
   sectionTitle: t('medication.sectionTitle'),
 
@@ -48,13 +48,13 @@ export default AbstractModuleRoute.extend({
   actions: {
     dispenseMedication() {
       if (this.currentUserCan('fulfill_medication')) {
-        this.transitionTo('medication.edit', 'dispense');
+        this.transitionTo('hospital.medication.edit', 'dispense');
       }
     },
 
     returnMedication() {
       if (this.currentUserCan(this.get('addCapability'))) {
-        this.transitionTo('medication.return', 'new');
+        this.transitionTo('hospital.medication.return', 'new');
       }
     }
   }

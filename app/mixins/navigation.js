@@ -7,32 +7,32 @@ export default Ember.Mixin.create({
     {
       title: 'Inventory',
       iconClass: 'octicon-package',
-      route: 'inventory',
+      route: 'hospital.inventory',
       capability: 'inventory',
       subnav: [
         {
           title: 'Requests',
           iconClass: 'octicon-chevron-right',
-          route: 'inventory.index',
+          route: 'hospital.inventory.index',
           capability: 'add_inventory_request'
         },
         {
           title: 'Items',
           iconClass: 'octicon-chevron-right',
-          route: 'inventory.listing',
+          route: 'hospital.inventory.listing',
           capability: 'inventory'
         },
         {
           title: 'Inventory Received',
           iconClass: 'octicon-plus',
-          route: 'inventory.batch',
+          route: 'hospital.inventory.batch',
           subroute: 'new',
           capability: 'add_inventory_item'
         },
         {
           title: 'Reports',
           iconClass: 'octicon-chevron-right',
-          route: 'inventory.reports',
+          route: 'hospital.inventory.reports',
           capability: 'inventory'
         }
       ]
@@ -40,32 +40,32 @@ export default Ember.Mixin.create({
     {
       title: 'Patients',
       iconClass: 'octicon-organization',
-      route: 'patients',
+      route: 'hospital.patients',
       capability: 'patients',
       subnav: [
         {
           title: 'Patient Listing',
           iconClass: 'octicon-chevron-right',
-          route: 'patients',
+          route: 'hospital.patients',
           capability: 'patients'
         },
         {
           title: 'Admitted Patients',
           iconClass: 'octicon-chevron-right',
-          route: 'patients.admitted',
+          route: 'hospital.patients.admitted',
           capability: 'patients'
         },
         {
           title: 'New Patient',
           iconClass: 'octicon-plus',
-          route: 'patients.edit',
+          route: 'hospital.patients.edit',
           subroute: 'new',
           capability: 'add_patient'
         },
         {
           title: 'Reports',
           iconClass: 'octicon-chevron-right',
-          route: 'patients.reports',
+          route: 'hospital.patients.reports',
           capability: 'patients'
         }
       ]
@@ -73,37 +73,37 @@ export default Ember.Mixin.create({
     {
       title: 'Appointments',
       iconClass: 'octicon-calendar',
-      route: 'appointments.index',
+      route: 'hospital.appointments.index',
       capability: 'appointments',
       subnav: [
         {
           title: 'This Week',
           iconClass: 'octicon-chevron-right',
-          route: 'appointments.index',
+          route: 'hospital.appointments.index',
           capability: 'appointments'
         },
         {
           title: 'Today',
           iconClass: 'octicon-chevron-right',
-          route: 'appointments.today',
+          route: 'hospital.appointments.today',
           capability: 'appointments'
         },
         {
           title: 'Missed',
           iconClass: 'octicon-chevron-right',
-          route: 'appointments.missed',
+          route: 'hospital.appointments.missed',
           capability: 'appointments'
         },
         {
           title: 'Search',
           iconClass: 'octicon-search',
-          route: 'appointments.search',
+          route: 'hospital.appointments.search',
           capability: 'appointments'
         },
         {
           title: 'Add Appointment',
           iconClass: 'octicon-plus',
-          route: 'appointments.edit',
+          route: 'hospital.appointments.edit',
           subroute: 'new',
           capability: 'add_appointment'
         }
@@ -112,25 +112,25 @@ export default Ember.Mixin.create({
     {
       title: 'Imaging',
       iconClass: 'octicon-device-camera',
-      route: 'imaging.index',
+      route: 'hospital.imaging.index',
       capability: 'imaging',
       subnav: [
         {
           title: 'Requests',
           iconClass: 'octicon-chevron-right',
-          route: 'imaging.index',
+          route: 'hospital.imaging.index',
           capability: 'imaging'
         },
         {
           title: 'Completed',
           iconClass: 'octicon-chevron-right',
-          route: 'imaging.completed',
+          route: 'hospital.imaging.completed',
           capability: 'imaging'
         },
         {
           title: 'New Request',
           iconClass: 'octicon-plus',
-          route: 'imaging.edit',
+          route: 'hospital.imaging.edit',
           subroute: 'new',
           capability: 'add_imaging'
         }
@@ -139,39 +139,39 @@ export default Ember.Mixin.create({
     {
       title: 'Medication',
       iconClass: 'octicon-file-text',
-      route: 'medication.index',
+      route: 'hospital.medication.index',
       capability: 'medication',
       subnav: [
         {
           title: 'Requests',
           iconClass: 'octicon-chevron-right',
-          route: 'medication.index',
+          route: 'hospital.medication.index',
           capability: 'medication'
         },
         {
           title: 'Completed',
           iconClass: 'octicon-chevron-right',
-          route: 'medication.completed',
+          route: 'hospital.medication.completed',
           capability: 'medication'
         },
         {
           title: 'New Request',
           iconClass: 'octicon-plus',
-          route: 'medication.edit',
+          route: 'hospital.medication.edit',
           subroute: 'new',
           capability: 'add_medication'
         },
         {
           title: 'Dispense',
           iconClass: 'octicon-checklist',
-          route: 'medication.edit',
+          route: 'hospital.medication.edit',
           subroute: 'dispense',
           capability: 'fulfill_medication'
         },
         {
           title: 'Return Medication',
           iconClass: 'octicon-mail-reply',
-          route: 'medication.return',
+          route: 'hospital.medication.return',
           subroute: 'new',
           capability: 'add_medication'
         }
@@ -180,25 +180,25 @@ export default Ember.Mixin.create({
     {
       title: 'Labs',
       iconClass: 'octicon-microscope',
-      route: 'labs.index',
+      route: 'hospital.labs.index',
       capability: 'labs',
       subnav: [
         {
           title: 'Requests',
           iconClass: 'octicon-chevron-right',
-          route: 'labs.index',
+          route: 'hospital.labs.index',
           capability: 'labs'
         },
         {
           title: 'Completed',
           iconClass: 'octicon-chevron-right',
-          route: 'labs.completed',
+          route: 'hospital.labs.completed',
           capability: 'labs'
         },
         {
           title: 'New Request',
           iconClass: 'octicon-plus',
-          route: 'labs.edit',
+          route: 'hospital.labs.edit',
           subroute: 'new',
           capability: 'add_lab'
         }
@@ -207,32 +207,32 @@ export default Ember.Mixin.create({
     {
       title: 'Billing',
       iconClass: 'octicon-credit-card',
-      route: 'invoices.index',
+      route: 'hospital.invoices.index',
       capability: 'invoices',
       subnav: [
         {
           title: 'Invoices',
           iconClass: 'octicon-chevron-right',
-          route: 'invoices.index',
+          route: 'hospital.invoices.index',
           capability: 'invoices'
         },
         {
           title: 'New Invoice',
           iconClass: 'octicon-plus',
-          route: 'invoices.edit',
+          route: 'hospital.invoices.edit',
           subroute: 'new',
           capability: 'invoices'
         },
         {
           title: 'Prices',
           iconClass: 'octicon-chevron-right',
-          route: 'pricing.index',
+          route: 'hospital.pricing.index',
           capability: 'invoices'
         },
         {
           title: 'Price Profiles',
           iconClass: 'octicon-chevron-right',
-          route: 'pricing.profiles',
+          route: 'hospital.pricing.profiles',
           capability: 'invoices'
         }
       ]
@@ -240,50 +240,50 @@ export default Ember.Mixin.create({
     {
       title: 'Administration',
       iconClass: 'octicon-person',
-      route: 'admin.lookup',
+      route: 'hospital.admin.lookup',
       capability: 'admin',
       subnav: [
         {
           title: 'Lookup Lists',
           iconClass: 'octicon-chevron-right',
-          route: 'admin.lookup',
+          route: 'hospital.admin.lookup',
           capability: 'update_config'
         },
         {
           title: 'Address Fields',
           iconClass: 'octicon-chevron-right',
-          route: 'admin.address',
+          route: 'hospital.admin.address',
           capability: 'update_config'
         },
         {
           title: 'Load DB',
           iconClass: 'octicon-plus',
-          route: 'admin.loaddb',
+          route: 'hospital.admin.loaddb',
           capability: 'load_db'
         },
         {
           title: 'Users',
           iconClass: 'octicon-chevron-right',
-          route: 'users',
+          route: 'hospital.admin.users',
           capability: 'users'
         },
         {
           title: 'New User',
           iconClass: 'octicon-plus',
-          route: 'users.edit',
+          route: 'hospital.admin.users.edit',
           subroute: 'new',
           capability: 'add_user'
         },
         {
           title: 'User Roles',
           iconClass: 'octicon-chevron-right',
-          route: 'admin.roles',
+          route: 'hospital.admin.roles',
           capability: 'define_user_roles'
         },
         {
           title: 'Workflow',
           iconClass: 'octicon-chevron-right',
-          route: 'admin.workflow',
+          route: 'hospital.admin.workflow',
           capability: 'update_config'
         }
       ]

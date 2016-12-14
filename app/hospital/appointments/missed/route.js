@@ -1,8 +1,8 @@
-import AppointmentIndexRoute from 'hospitalrun/appointments/index/route';
+import AppointmentIndexRoute from 'hospitalrun/hospital/appointments/index/route';
 import { translationMacro as t } from 'ember-i18n';
 
 export default AppointmentIndexRoute.extend({
-  editReturn: 'appointments.missed',
+  editReturn: 'hospital.appointments.missed',
   modelName: 'appointment',
   pageTitle: t('appointments.missed'),
 

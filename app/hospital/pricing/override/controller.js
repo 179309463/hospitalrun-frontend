@@ -3,7 +3,7 @@ import IsUpdateDisabled from 'hospitalrun/mixins/is-update-disabled';
 import SelectValues from 'hospitalrun/utils/select-values';
 
 export default Ember.Controller.extend(IsUpdateDisabled, {
-  pricingController: Ember.inject.controller('pricing'),
+  pricingController: Ember.inject.controller('hospital/pricing'),
 
   actions: {
     cancel() {
@@ -24,7 +24,7 @@ export default Ember.Controller.extend(IsUpdateDisabled, {
     }
   },
 
-  editController: Ember.inject.controller('pricing/edit'),
+  editController: Ember.inject.controller('hospital/pricing/edit'),
   pricingProfiles: Ember.computed.map('pricingController.pricingProfiles', SelectValues.selectObjectMap),
   showUpdateButton: true,
 

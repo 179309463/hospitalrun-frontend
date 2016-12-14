@@ -8,7 +8,7 @@ import UserSession from 'hospitalrun/mixins/user-session';
 import VisitTypes from 'hospitalrun/mixins/visit-types';
 
 export default AbstractEditController.extend(ChargeActions, PatientSubmodule, PatientNotes, UserSession, VisitTypes, {
-  visitsController: Ember.inject.controller('visits'),
+  visitsController: Ember.inject.controller('hospital/visits'),
 
   canAddAppointment: function() {
     return this.currentUserCan('add_appointment');
@@ -91,7 +91,7 @@ export default AbstractEditController.extend(ChargeActions, PatientSubmodule, Pa
 
   cancelAction: 'returnToPatient',
   chargePricingCategory: 'Ward',
-  chargeRoute: 'visits.charge',
+  chargeRoute: 'hospital.visits.charge',
   diagnosisList: Ember.computed.alias('visitsController.diagnosisList'),
   findPatientVisits: false,
   patientImaging: Ember.computed.alias('model.imaging'),
@@ -247,7 +247,7 @@ export default AbstractEditController.extend(ChargeActions, PatientSubmodule, Pa
           'returnToVisit': true
         });
       }
-      this.transitionToRoute('imaging.edit', imaging);
+      this.transitionToRoute('hospital.imaging.edit', imaging);
     },
 
     editLab(lab) {
@@ -255,14 +255,14 @@ export default AbstractEditController.extend(ChargeActions, PatientSubmodule, Pa
         lab.setProperties({
           'returnToVisit': true
         });
-        this.transitionToRoute('labs.edit', lab);
+        this.transitionToRoute('hospital.labs.edit', lab);
       }
     },
 
     editMedication(medication) {
       if (medication.get('canEdit')) {
         medication.set('returnToVisit', true);
-        this.transitionToRoute('medication.edit', medication);
+        this.transitionToRoute('hospital.medication.edit', medication);
       }
     },
 
@@ -270,7 +270,7 @@ export default AbstractEditController.extend(ChargeActions, PatientSubmodule, Pa
       let newVitals = this.get('store').createRecord('vital', {
         dateRecorded: new Date()
       });
-      this.send('openModal', 'visits.vitals.edit', newVitals);
+      this.send('openModal', 'hospital.visits.vitals.edit', newVitals);
     },
 
     showAddPatientNote(model) {
@@ -282,52 +282,52 @@ export default AbstractEditController.extend(ChargeActions, PatientSubmodule, Pa
           noteType: this._computeNoteType(this.get('model'))
         });
       }
-      this.send('openModal', 'patients.notes', model);
+      this.send('openModal', 'hospital.patients.notes', model);
     },
 
     newAppointment() {
-      this._addChildObject('appointments.edit');
+      this._addChildObject('hospital.appointments.edit');
     },
 
     newImaging() {
-      this._addChildObject('imaging.edit');
+      this._addChildObject('hospital.imaging.edit');
     },
 
     newLab() {
-      this._addChildObject('labs.edit');
+      this._addChildObject('hospital.labs.edit');
     },
 
     newMedication() {
-      this._addChildObject('medication.edit');
+      this._addChildObject('hospital.medication.edit');
     },
 
     showAddDiagnosis() {
       let newDiagnosis = this.get('store').createRecord('add-diagnosis');
-      this.send('openModal', 'visits.add-diagnosis', newDiagnosis);
+      this.send('openModal', 'hospital.visits.add-diagnosis', newDiagnosis);
     },
 
     showAddProcedure() {
-      this._addChildObject('procedures.edit');
+      this._addChildObject('hospital.visits.procedures.edit');
     },
 
     showDeleteImaging(imaging) {
-      this.send('openModal', 'imaging.delete', imaging);
+      this.send('openModal', 'hospital.imaging.delete', imaging);
     },
 
     showDeleteLab(lab) {
-      this.send('openModal', 'labs.delete', lab);
+      this.send('openModal', 'hospital.labs.delete', lab);
     },
 
     showDeleteMedication(medication) {
-      this.send('openModal', 'medication.delete', medication);
+      this.send('openModal', 'hospital.medication.delete', medication);
     },
 
     showDeleteProcedure(procedure) {
-      this.send('openModal', 'visits.procedures.delete', procedure);
+      this.send('openModal', 'hospital.visits.procedures.delete', procedure);
     },
 
     showDeleteVitals(vitals) {
-      this.send('openModal', 'visits.vitals.delete', vitals);
+      this.send('openModal', 'hospital.visits.vitals.delete', vitals);
     },
 
     showEditProcedure(procedure) {
@@ -336,11 +336,11 @@ export default AbstractEditController.extend(ChargeActions, PatientSubmodule, Pa
       }
       procedure.set('returnToVisit', true);
       procedure.set('returnToPatient', false);
-      this.transitionToRoute('procedures.edit', procedure);
+      this.transitionToRoute('hospital.visits.procedures.edit', procedure);
     },
 
     showEditVitals(vitals) {
-      this.send('openModal', 'visits.vitals.edit', vitals);
+      this.send('openModal', 'hospital.visits.vitals.edit', vitals);
     },
 
     showDeletePatientNote(note) {

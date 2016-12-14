@@ -4,10 +4,10 @@ import Ember from 'ember';
 import PatientSubmodule from 'hospitalrun/mixins/patient-submodule';
 
 export default AbstractEditController.extend(ChargeActions, PatientSubmodule, {
-  visitsController: Ember.inject.controller('visits'),
+  visitsController: Ember.inject.controller('hospital/visits'),
 
   chargePricingCategory: 'Procedure',
-  chargeRoute: 'procedures.charge',
+  chargeRoute: 'hospital.visits.procedures.charge',
 
   anesthesiaTypes: Ember.computed.alias('visitsController.anesthesiaTypes'),
   anesthesiologistList: Ember.computed.alias('visitsController.anesthesiologistList'),
@@ -46,7 +46,7 @@ export default AbstractEditController.extend(ChargeActions, PatientSubmodule, {
     id: 'procedure_locations'
   }],
 
-  editController: Ember.inject.controller('visits/edit'),
+  editController: Ember.inject.controller('hospital/visits/edit'),
   pricingList: null, // This gets filled in by the route
   pricingTypes: Ember.computed.alias('visitsController.procedurePricingTypes'),
   newProcedure: false,
@@ -68,14 +68,14 @@ export default AbstractEditController.extend(ChargeActions, PatientSubmodule, {
         newMedicationCharge: true,
         quantity: 1
       });
-      this.send('openModal', 'procedures.medication', newCharge);
+      this.send('openModal', 'hospital.visits.procedures.medication', newCharge);
     },
 
     showEditMedication(charge) {
       let medicationList = this.get('medicationList');
       let selectedMedication = medicationList.findBy('id', charge.get('medication.id'));
       charge.set('itemName', selectedMedication.name);
-      this.send('openModal', 'procedures.medication', charge);
+      this.send('openModal', 'hospital.visits.procedures.medication', charge);
     },
 
     showDeleteMedication(charge) {

@@ -32,7 +32,7 @@ export default AbstractIndexRoute.extend(UserSession, {
   actions: {
     fulfill(item) {
       item.set('dateCompleted', new Date());
-      this.transitionTo('inventory.request', item);
+      this.transitionTo('hospital.inventory.request', item);
     }
   }
 });

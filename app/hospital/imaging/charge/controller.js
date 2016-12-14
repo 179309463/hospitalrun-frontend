@@ -1,4 +1,4 @@
-import ProcedureChargeController from 'hospitalrun/procedures/charge/controller';
+import ProcedureChargeController from 'hospitalrun/hospital/visits/procedures/charge/controller';
 import Ember from 'ember';
 
 export default ProcedureChargeController.extend({

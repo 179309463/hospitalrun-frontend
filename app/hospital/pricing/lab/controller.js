@@ -1,2 +1,2 @@
-import PricingIndexController from 'hospitalrun/pricing/index/controller';
+import PricingIndexController from 'hospitalrun/hospital/pricing/index/controller';
 export default PricingIndexController.extend();

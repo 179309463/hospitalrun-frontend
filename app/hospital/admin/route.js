@@ -2,14 +2,14 @@ import AbstractModuleRoute from 'hospitalrun/routes/abstract-module-route';
 export default AbstractModuleRoute.extend({
   addCapability: 'add_user',
   allowSearch: false,
-  moduleName: 'admin',
+  moduleName: 'hospital.admin',
   sectionTitle: 'Admin',
 
   editPath: function() {
-    return 'users.edit';
+    return 'hospital.admin.users.edit';
   }.property(),
 
   deletePath: function() {
-    return 'users.delete';
+    return 'hospital.admin.users.delete';
   }.property()
 });

@@ -4,7 +4,7 @@ import SelectValues from 'hospitalrun/utils/select-values';
 import { translationMacro as t } from 'ember-i18n';
 
 export default Ember.Controller.extend(IsUpdateDisabled, {
-  patientsController: Ember.inject.controller('patients'),
+  patientsController: Ember.inject.controller('hospital/patients'),
 
   categoryTypes: [
     'Clothing',

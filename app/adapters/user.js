@@ -12,7 +12,7 @@ export default DS.RESTAdapter.extend(UserSession, {
     let error = this._super(jqXHR);
     if (jqXHR && jqXHR.status === 401) {
       let jsonErrors = Ember.$.parseJSON(jqXHR.responseText);
-      window.Hospitalrun.__container__.lookup('controller:application').transitionToRoute('login');
+      window.Hospitalrun.__container__.lookup('controller:application').transitionToRoute('hospital.login');
       return new DS.InvalidError(jsonErrors);
     } else {
       return error;

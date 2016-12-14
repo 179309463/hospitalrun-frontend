@@ -35,7 +35,7 @@ export default AbstractModuleRoute.extend(FulfillRequest, InventoryId, Inventory
   }],
 
   currentItem: null,
-  moduleName: 'inventory',
+  moduleName: 'hospital.inventory',
 
   newButtonText: '+ new request',
   sectionTitle: 'Inventory',
@@ -55,16 +55,16 @@ export default AbstractModuleRoute.extend(FulfillRequest, InventoryId, Inventory
 
     newInventoryBatch() {
       if (this.currentUserCan(this.get('addCapability'))) {
-        this.transitionTo('inventory.batch', 'new');
+        this.transitionTo('hospital.inventory.batch', 'new');
       }
     },
 
     newRequest() {
-      this.transitionTo('inventory.request', 'new');
+      this.transitionTo('hospital.inventory.request', 'new');
     },
 
     allItems() {
-      this.transitionTo('inventory.listing');
+      this.transitionTo('hospital.inventory.listing');
     },
 
     showAddPurchase(inventoryItem) {
@@ -74,7 +74,7 @@ export default AbstractModuleRoute.extend(FulfillRequest, InventoryId, Inventory
         inventoryItem: inventoryItem.get('id')
       });
       this.set('currentItem', inventoryItem);
-      this.send('openModal', 'inventory.purchase.edit', newPurchase);
+      this.send('openModal', 'hospital.inventory.purchase.edit', newPurchase);
     }
   }
 });

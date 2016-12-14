@@ -4,10 +4,10 @@ import Ember from 'ember';
 import PatientSubmodule from 'hospitalrun/mixins/patient-submodule';
 
 export default AbstractEditController.extend(ChargeActions, PatientSubmodule, {
-  imagingController: Ember.inject.controller('imaging'),
+  imagingController: Ember.inject.controller('hospital/imaging'),
 
   chargePricingCategory: 'Imaging',
-  chargeRoute: 'imaging.charge',
+  chargeRoute: 'hospital.imaging.charge',
   selectedImagingType: null,
 
   canComplete: function() {

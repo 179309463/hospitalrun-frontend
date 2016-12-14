@@ -8,7 +8,7 @@ import PatientSubmodule from 'hospitalrun/mixins/patient-submodule';
 import SelectValues from 'hospitalrun/utils/select-values';
 
 export default AbstractEditController.extend(FulfillRequest, InventoryLocations, InventorySelection, PatientSubmodule, {
-  medicationController: Ember.inject.controller('medication'),
+  medicationController: Ember.inject.controller('hospital/medication'),
   medicationList: [],
 
   lookupListsToUpdate: [{

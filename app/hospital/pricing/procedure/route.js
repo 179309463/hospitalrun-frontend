@@ -1,4 +1,4 @@
-import PricingIndexRoute from 'hospitalrun/pricing/index/route';
+import PricingIndexRoute from 'hospitalrun/hospital/pricing/index/route';
 export default PricingIndexRoute.extend({
   category: 'Procedure',
   pageTitle: 'Procedure Pricing',
@@ -6,7 +6,7 @@ export default PricingIndexRoute.extend({
   actions: {
     editItem(item) {
       item.set('returnTo', 'pricing.procedure');
-      this.transitionTo('pricing.edit', item);
+      this.transitionTo('hospital.pricing.edit', item);
     }
   }
 });

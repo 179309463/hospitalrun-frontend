@@ -26,7 +26,7 @@ export default AbstractPagedController.extend(PatientVisits, {
         if (visitToDischarge) {
           visitToDischarge.set('status', 'Discharged');
           visitToDischarge.set('endDate', new Date());
-          this.transitionToRoute('visits.edit', visitToDischarge);
+          this.transitionToRoute('hospital.visits.edit', visitToDischarge);
         }
       }.bind(this));
     }

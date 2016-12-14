@@ -3,7 +3,7 @@ import AdjustmentTypes from 'hospitalrun/mixins/inventory-adjustment-types';
 import Ember from 'ember';
 import { translationMacro as t } from 'ember-i18n';
 export default AbstractEditController.extend(AdjustmentTypes, {
-  inventoryController: Ember.inject.controller('inventory'),
+  inventoryController: Ember.inject.controller('hospital/inventory'),
 
   expenseAccountList: Ember.computed.alias('inventoryController.expenseAccountList'),
 

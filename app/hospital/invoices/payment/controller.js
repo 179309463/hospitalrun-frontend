@@ -5,7 +5,7 @@ import PatientSubmodule from 'hospitalrun/mixins/patient-submodule';
 export default AbstractEditController.extend(PatientSubmodule, {
   cancelAction: 'closeModal',
   findPatientVisits: false,
-  invoiceController: Ember.inject.controller('invoices'),
+  invoiceController: Ember.inject.controller('hospital/invoices'),
   newPayment: false,
 
   expenseAccountList: Ember.computed.alias('invoiceController.expenseAccountList'),

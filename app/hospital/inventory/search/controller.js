@@ -1,2 +1,2 @@
-import InventoryListingController from 'hospitalrun/inventory/listing/controller';
+import InventoryListingController from 'hospitalrun/hospital/inventory/listing/controller';
 export default InventoryListingController.extend();

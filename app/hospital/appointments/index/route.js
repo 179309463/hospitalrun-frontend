@@ -2,7 +2,7 @@ import AbstractIndexRoute from 'hospitalrun/routes/abstract-index-route';
 import { translationMacro as t } from 'ember-i18n';
 
 export default AbstractIndexRoute.extend({
-  editReturn: 'appointments.index',
+  editReturn: 'hospital.appointments.index',
   modelName: 'appointment',
   pageTitle: t('appointments.thisWeek'),
 

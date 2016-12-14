@@ -1,6 +1,6 @@
 import AbstractSearchRoute from 'hospitalrun/routes/abstract-search-route';
 export default AbstractSearchRoute.extend({
-  moduleName: 'patients',
+  moduleName: 'hospital.patients',
   searchKeys: [{
     name: 'friendlyId',
     type: 'contains'

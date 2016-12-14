@@ -21,26 +21,26 @@ export default AbstractModuleRoute.extend({
     findArgs: ['lookup', 'ward_pricing_types']
   }],
   allowSearch: true,
-  moduleName: 'pricing',
+  moduleName: 'hospital.pricing',
   newButtonText: '+ new item',
   sectionTitle: 'Pricing',
   subActions: [{
     text: 'All Pricing Items',
-    linkTo: 'pricing.index'
+    linkTo: 'hospital.pricing.index'
   }, {
     text: 'Imaging Pricing',
-    linkTo: 'pricing.imaging'
+    linkTo: 'hospital.pricing.imaging'
   }, {
     text: 'Lab Pricing',
-    linkTo: 'pricing.lab'
+    linkTo: 'hospital.pricing.lab'
   }, {
     text: 'Procedure Pricing',
-    linkTo: 'pricing.procedure'
+    linkTo: 'hospital.pricing.procedure'
   }, {
     text: 'Ward Pricing',
-    linkTo: 'pricing.ward'
+    linkTo: 'hospital.pricing.ward'
   }, {
     text: 'Pricing Profiles',
-    linkTo: 'pricing.profiles'
+    linkTo: 'hospital.pricing.profiles'
   }]
 });

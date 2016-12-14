@@ -2,7 +2,7 @@ import AbstractDeleteController from 'hospitalrun/controllers/abstract-delete-co
 import Ember from 'ember';
 export default AbstractDeleteController.extend({
   afterDeleteAction: 'notifyVitalsDelete',
-  editController: Ember.inject.controller('visits/edit'),
+  editController: Ember.inject.controller('hospital/visits/edit'),
   title: 'Delete Vitals',
 
   actions: {

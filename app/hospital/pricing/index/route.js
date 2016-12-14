@@ -37,7 +37,7 @@ export default AbstractIndexRoute.extend(UserSession, {
         if (routeParts.length === 2 && routeParts[1] !== 'index') {
           routeId += routeParts[1].capitalize();
         }
-        this.transitionTo('pricing.edit', routeId);
+        this.transitionTo('hospital.pricing.edit', routeId);
       }
     }
   }

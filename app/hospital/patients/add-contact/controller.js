@@ -3,7 +3,7 @@ import IsUpdateDisabled from 'hospitalrun/mixins/is-update-disabled';
 import { translationMacro as t } from 'ember-i18n';
 
 export default Ember.Controller.extend(IsUpdateDisabled, {
-  patientsEdit: Ember.inject.controller('patients/edit'),
+  patientsEdit: Ember.inject.controller('hospital/patients/edit'),
   editController: Ember.computed.alias('patientsEdit'),
   title: t('patients.titles.addContact'),
   updateButtonText: t('buttons.add'),

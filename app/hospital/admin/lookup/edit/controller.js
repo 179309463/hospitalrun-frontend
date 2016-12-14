@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import IsUpdateDisabled from 'hospitalrun/mixins/is-update-disabled';
 export default Ember.Controller.extend(IsUpdateDisabled, {
-  editController: Ember.inject.controller('admin/lookup'),
+  editController: Ember.inject.controller('hospital/admin/lookup'),
   showUpdateButton: true,
 
   updateButtonAction: 'update',

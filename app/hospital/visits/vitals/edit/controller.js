@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default AbstractEditController.extend({
   cancelAction: 'closeModal',
 
-  editController: Ember.inject.controller('visits/edit'),
+  editController: Ember.inject.controller('hospital/visits/edit'),
 
   newVitals: false,
 

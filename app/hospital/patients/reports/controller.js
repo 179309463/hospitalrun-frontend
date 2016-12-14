@@ -6,7 +6,7 @@ import SelectValues from 'hospitalrun/utils/select-values';
 import VisitTypes from 'hospitalrun/mixins/visit-types';
 
 export default AbstractReportController.extend(PatientDiagnosis, PatientVisits, VisitTypes, {
-  patientsController: Ember.inject.controller('patients'),
+  patientsController: Ember.inject.controller('hospital/patients'),
 
   clinicList: Ember.computed.map('patientsController.clinicList.value', SelectValues.selectValuesMap),
   diagnosisList: Ember.computed.alias('patientsController.diagnosisList'),
@@ -905,7 +905,7 @@ export default AbstractReportController.extend(PatientDiagnosis, PatientVisits, 
     viewPatient(id) {
       this.store.find('patient', id).then(function(item) {
         item.set('returnTo', 'patients.reports');
-        this.transitionToRoute('patients.edit', item);
+        this.transitionToRoute('hospital.patients.edit', item);
       }.bind(this));
     }
 

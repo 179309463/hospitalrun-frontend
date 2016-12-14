@@ -5,7 +5,7 @@ import ImagingPricingTypes from 'hospitalrun/mixins/imaging-pricing-types';
 import ReturnTo from 'hospitalrun/mixins/return-to';
 import SelectValues from 'hospitalrun/utils/select-values';
 export default AbstractEditController.extend(LabPricingTypes, ImagingPricingTypes, ReturnTo, {
-  pricingController: Ember.inject.controller('pricing'),
+  pricingController: Ember.inject.controller('hospital/pricing'),
 
   actions: {
     addOverride(override) {
@@ -27,7 +27,7 @@ export default AbstractEditController.extend(LabPricingTypes, ImagingPricingType
       if (Ember.isEmpty(overrideToEdit)) {
         overrideToEdit = this.store.createRecord('override-price');
       }
-      this.send('openModal', 'pricing.override', overrideToEdit);
+      this.send('openModal', 'hospital.pricing.override', overrideToEdit);
     },
     showDeleteOverride(overrideToDelete) {
       let message = 'Are you sure you want to delete this override?';

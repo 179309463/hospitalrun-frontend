@@ -7,7 +7,7 @@ export default AbstractModuleRoute.extend(ModalHelper, PatientListRoute, {
   currentScreenTitle: 'Invoices',
   editTitle: 'Edit Invoice',
   newTitle: 'New Invoice',
-  moduleName: 'invoices',
+  moduleName: 'hospital.invoices',
   newButtonText: '+ new invoice',
   sectionTitle: 'Invoices',
 
@@ -38,7 +38,7 @@ export default AbstractModuleRoute.extend(ModalHelper, PatientListRoute, {
         paymentType: 'Deposit',
         datePaid: new Date()
       });
-      this.send('openModal', 'invoices.payment', payment);
+      this.send('openModal', 'hospital.invoices.payment', payment);
     },
 
     showAddPayment(invoice) {
@@ -47,12 +47,12 @@ export default AbstractModuleRoute.extend(ModalHelper, PatientListRoute, {
         paymentType: 'Payment',
         datePaid: new Date()
       });
-      this.send('openModal', 'invoices.payment', payment);
+      this.send('openModal', 'hospital.invoices.payment', payment);
     },
 
     showEditPayment(payment) {
       if (this.currentUserCan('add_payment')) {
-        this.send('openModal', 'invoices.payment', payment);
+        this.send('openModal', 'hospital.invoices.payment', payment);
       }
     }
   },
@@ -60,24 +60,24 @@ export default AbstractModuleRoute.extend(ModalHelper, PatientListRoute, {
   subActions: function() {
     let actions = [{
       text: 'Billed',
-      linkTo: 'invoices.index',
+      linkTo: 'hospital.invoices.index',
       statusQuery: 'Billed'
     }];
     if (this.currentUserCan('add_invoice')) {
       actions.push({
         text: 'Drafts',
-        linkTo: 'invoices.index',
+        linkTo: 'hospital.invoices.index',
         statusQuery: 'Draft'
       });
       actions.push({
         text: 'All Invoices',
-        linkTo: 'invoices.index',
+        linkTo: 'hospital.invoices.index',
         statusQuery: 'All'
       });
     }
     actions.push({
       text: 'Paid',
-      linkTo: 'invoices.index',
+      linkTo: 'hospital.invoices.index',
       statusQuery: 'Paid'
     });
     return actions;

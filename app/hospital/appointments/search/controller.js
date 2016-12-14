@@ -1,10 +1,10 @@
-import AppointmentIndexController from 'hospitalrun/appointments/index/controller';
+import AppointmentIndexController from 'hospitalrun/hospital/appointments/index/controller';
 import AppointmentStatuses from 'hospitalrun/mixins/appointment-statuses';
 import Ember from 'ember';
 import SelectValues from 'hospitalrun/utils/select-values';
 import VisitTypes from 'hospitalrun/mixins/visit-types';
 export default AppointmentIndexController.extend(AppointmentStatuses, VisitTypes, {
-  appointmentsController: Ember.inject.controller('appointments'),
+  appointmentsController: Ember.inject.controller('hospital/appointments'),
   appointmentType: null,
   physicians: Ember.computed.alias('appointmentsController.physicianList.value'),
   physicianList: function() {

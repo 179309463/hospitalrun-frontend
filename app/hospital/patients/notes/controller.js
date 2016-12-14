@@ -7,7 +7,7 @@ import UserSession from 'hospitalrun/mixins/user-session';
 export default AbstractEditController.extend(IsUpdateDisabled, UserSession, PatientSubmodule, PatientNotes, {
   cancelAction: 'closeModal',
   updateAction: 'updateNote',
-  moduleController: Ember.inject.controller('patients'),
+  moduleController: Ember.inject.controller('hospital/patients'),
   physicianList: Ember.computed.alias('moduleController.physicianList'),
   lookupListsToUpdate: [{
     name: 'physicianList',

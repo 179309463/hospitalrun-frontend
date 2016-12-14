@@ -5,7 +5,7 @@ import PatientSubmodule from 'hospitalrun/mixins/patient-submodule';
 import VisitTypes from 'hospitalrun/mixins/visit-types';
 
 export default AbstractEditController.extend(AppointmentStatuses, PatientSubmodule, VisitTypes, {
-  appointmentsController: Ember.inject.controller('appointments'),
+  appointmentsController: Ember.inject.controller('hospital/appointments'),
   findPatientVisits: false,
 
   locationList: Ember.computed.alias('appointmentsController.locationList'),

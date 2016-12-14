@@ -3,7 +3,7 @@ import Ember from 'ember';
 import UnitTypes from 'hospitalrun/mixins/unit-types';
 
 export default AbstractEditController.extend(UnitTypes, {
-  inventoryController: Ember.inject.controller('inventory'),
+  inventoryController: Ember.inject.controller('hospital/inventory'),
   cancelAction: 'closeModal',
 
   canEditQuantity: function() {

@@ -324,7 +324,7 @@ export default Ember.Controller.extend(BillingCategories, EKMixin,
 
     actions: {
       addValue() {
-        this.send('openModal', 'admin.lookup.edit', Ember.Object.create({
+        this.send('openModal', 'hospital.admin.lookup.edit', Ember.Object.create({
           isNew: true
         }));
       },
@@ -338,7 +338,7 @@ export default Ember.Controller.extend(BillingCategories, EKMixin,
       },
       editValue(value) {
         if (!Ember.isEmpty(value)) {
-          this.send('openModal', 'admin.lookup.edit', Ember.Object.create({
+          this.send('openModal', 'hospital.admin.lookup.edit', Ember.Object.create({
             isNew: false,
             originalValue: value.toString(),
             value: value.toString()

@@ -11,7 +11,7 @@ export default Ember.Mixin.create(PatientVisits, {
 
   actions: {
     showPatient(patient) {
-      this.transitionToRoute('patients.edit', patient);
+      this.transitionToRoute('hospital.patients.edit', patient);
     },
 
     returnToAllItems() {
@@ -20,11 +20,11 @@ export default Ember.Mixin.create(PatientVisits, {
     },
     returnToPatient() {
       this._cancelUpdate();
-      this.transitionToRoute('patients.edit', this.get('returnPatientId'));
+      this.transitionToRoute('hospital.patients.edit', this.get('returnPatientId'));
     },
     returnToVisit() {
       this._cancelUpdate();
-      this.transitionToRoute('visits.edit', this.get('returnVisitId'));
+      this.transitionToRoute('hospital.visits.edit', this.get('returnVisitId'));
     }
   },
 

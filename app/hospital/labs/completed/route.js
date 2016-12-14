@@ -1,4 +1,4 @@
-import LabsIndexRoute from 'hospitalrun/labs/index/route';
+import LabsIndexRoute from 'hospitalrun/hospital/labs/index/route';
 import { translationMacro as t } from 'ember-i18n';
 
 export default LabsIndexRoute.extend({

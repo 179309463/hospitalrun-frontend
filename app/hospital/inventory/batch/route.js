@@ -1,4 +1,4 @@
-import InventoryRequestRoute from 'hospitalrun/inventory/request/route';
+import InventoryRequestRoute from 'hospitalrun/hospital/inventory/request/route';
 import Ember from 'ember';
 import { translationMacro as t } from 'ember-i18n';
 export default InventoryRequestRoute.extend({

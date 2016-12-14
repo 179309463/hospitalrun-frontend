@@ -6,7 +6,7 @@ import ModalHelper from 'hospitalrun/mixins/modal-helper';
 import NumberFormat from 'hospitalrun/mixins/number-format';
 import SelectValues from 'hospitalrun/utils/select-values';
 export default AbstractReportController.extend(LocationName, ModalHelper, NumberFormat, InventoryAdjustmentTypes, {
-  inventoryController: Ember.inject.controller('inventory'),
+  inventoryController: Ember.inject.controller('hospital/inventory'),
   effectiveDate: null,
   endDate: null,
   expenseCategories: Ember.computed(function() {
@@ -1329,7 +1329,7 @@ export default AbstractReportController.extend(LocationName, ModalHelper, Number
     viewInventory(id) {
       this.store.find('inventory', id).then(function(item) {
         item.set('returnTo', 'inventory.reports');
-        this.transitionToRoute('inventory.edit', item);
+        this.transitionToRoute('hospital.inventory.edit', item);
       }.bind(this));
     }
   }

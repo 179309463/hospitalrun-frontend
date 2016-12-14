@@ -4,7 +4,7 @@ import UserRoles from 'hospitalrun/mixins/user-roles';
 import uuid from 'npm:uuid';
 
 export default AbstractEditController.extend(UserRoles, {
-  usersController: Ember.inject.controller('users/index'),
+  usersController: Ember.inject.controller('hospital/admin/users/index'),
   updateCapability: 'add_user',
 
   users: Ember.computed.alias('usersController.model'),

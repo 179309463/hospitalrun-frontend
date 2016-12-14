@@ -6,7 +6,7 @@
     </div>
   {{/unless}}
   {{em-input property="name" label=(t 'labels.name') class="required  col-sm-6 test-inv-name"}}
-  {{inventory/rank-select property="rank"}}
+  {{hospital/inventory/rank-select property="rank"}}
   {{#unless model.isNew}}
     <div class="form-group col-sm-2">
       <label>{{t 'labels.quantity'}}</label>

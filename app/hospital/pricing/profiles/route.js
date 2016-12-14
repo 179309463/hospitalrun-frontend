@@ -8,7 +8,7 @@ export default AbstractIndexRoute.extend(ModalHelper, {
 
   actions: {
     editItem(item) {
-      this.send('openModal', 'pricing.profiles.edit', item);
+      this.send('openModal', 'hospital.pricing.profiles.edit', item);
     },
 
     deleteItem(item) {
@@ -29,7 +29,7 @@ export default AbstractIndexRoute.extend(ModalHelper, {
 
     newItem() {
       let newItem = this.store.createRecord('price-profile');
-      this.send('openModal', 'pricing.profiles.edit', newItem);
+      this.send('openModal', 'hospital.pricing.profiles.edit', newItem);
     },
 
     refreshProfiles() {

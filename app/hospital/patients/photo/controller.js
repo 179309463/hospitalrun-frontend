@@ -1,6 +1,6 @@
 import Ember from 'ember';
 export default Ember.Controller.extend({
-  patientsEdit: Ember.inject.controller('patients/edit'),
+  patientsEdit: Ember.inject.controller('hospital/patients/edit'),
 
   title: function() {
     let isNew = this.get('model.isNew');

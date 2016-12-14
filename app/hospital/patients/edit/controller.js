@@ -80,7 +80,7 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
   config: Ember.inject.service(),
   filesystem: Ember.inject.service(),
   database: Ember.inject.service(),
-  patientController: Ember.inject.controller('patients'),
+  patientController: Ember.inject.controller('hospital/patients'),
 
   addressOptions: Ember.computed.alias('patientController.addressOptions'),
   address1Include: Ember.computed.alias('patientController.addressOptions.value.address1Include'),
@@ -174,7 +174,7 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
       this.send('closeModal');
     },
     returnToPatient() {
-      this.transitionToRoute('patients.index');
+      this.transitionToRoute('hospital.patients.index');
     },
     /**
      * Add the specified photo to the patient's record.
@@ -265,7 +265,7 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
       if (this.get('canAddAppointment')) {
         appointment.set('returnToPatient', true);
         appointment.set('returnTo', null);
-        this.transitionToRoute('appointments.edit', appointment);
+        this.transitionToRoute('hospital.appointments.edit', appointment);
       }
     },
 
@@ -275,7 +275,7 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
           imaging.setProperties({
             'returnToPatient': true
           });
-          this.transitionToRoute('imaging.edit', imaging);
+          this.transitionToRoute('hospital.imaging.edit', imaging);
         }
       }
     },
@@ -286,7 +286,7 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
           lab.setProperties({
             'returnToPatient': true
           });
-          this.transitionToRoute('labs.edit', lab);
+          this.transitionToRoute('hospital.labs.edit', lab);
         }
       }
     },
@@ -295,13 +295,13 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
       if (this.get('canAddMedication')) {
         if (medication.get('canEdit')) {
           medication.set('returnToPatient', true);
-          this.transitionToRoute('medication.edit', medication);
+          this.transitionToRoute('hospital.medication.edit', medication);
         }
       }
     },
 
     editPhoto(photo) {
-      this.send('openModal', 'patients.photo', photo);
+      this.send('openModal', 'hospital.patients.photo', photo);
     },
 
     editProcedure(procedure) {
@@ -309,30 +309,30 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
         procedure.set('patient', this.get('model'));
         procedure.set('returnToVisit', false);
         procedure.set('returnToPatient', true);
-        this.transitionToRoute('procedures.edit', procedure);
+        this.transitionToRoute('hospital.visits.procedures.edit', procedure);
       }
     },
 
     editVisit(visit) {
       if (this.get('canAddVisit')) {
-        this.transitionToRoute('visits.edit', visit);
+        this.transitionToRoute('hospital.visits.edit', visit);
       }
     },
 
     newAppointment() {
-      this._addChildObject('appointments.edit');
+      this._addChildObject('hospital.appointments.edit');
     },
 
     newImaging() {
-      this._addChildObject('imaging.edit');
+      this._addChildObject('hospital.imaging.edit');
     },
 
     newLab() {
-      this._addChildObject('labs.edit');
+      this._addChildObject('hospital.labs.edit');
     },
 
     newMedication() {
-      this._addChildObject('medication.edit');
+      this._addChildObject('hospital.medication.edit');
     },
 
     newVisit() {
@@ -342,11 +342,11 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
     },
 
     showAddContact() {
-      this.send('openModal', 'patients.add-contact', {});
+      this.send('openModal', 'hospital.patients.add-contact', {});
     },
 
     showAddPhoto() {
-      this.send('openModal', 'patients.photo', {
+      this.send('openModal', 'hospital.patients.photo', {
         isNew: true
       });
     },
@@ -359,13 +359,13 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
             createdBy: this.getUserName()
           });
         }
-        this.send('openModal', 'patients.notes', model);
+        this.send('openModal', 'hospital.patients.notes', model);
       }
     },
 
     showDeleteAppointment(appointment) {
       appointment.set('deleteFromPatient', true);
-      this.send('openModal', 'appointments.delete', appointment);
+      this.send('openModal', 'hospital.appointments.delete', appointment);
     },
 
     showDeleteContact(contact) {
@@ -403,15 +403,15 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
     },
 
     showDeleteImaging(imaging) {
-      this.send('openModal', 'imaging.delete', imaging);
+      this.send('openModal', 'hospital.imaging.delete', imaging);
     },
 
     showDeleteLab(lab) {
-      this.send('openModal', 'labs.delete', lab);
+      this.send('openModal', 'hospital.labs.delete', lab);
     },
 
     showDeleteMedication(medication) {
-      this.send('openModal', 'medication.delete', medication);
+      this.send('openModal', 'hospital.medication.delete', medication);
     },
 
     showDeletePhoto(photo) {
@@ -427,7 +427,7 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
 
     showDeleteVisit(visit) {
       visit.set('deleteFromPatient', true);
-      this.send('openModal', 'visits.delete', visit);
+      this.send('openModal', 'hospital.visits.delete', visit);
     },
 
     showEditExpense(expenseInfo) {
@@ -492,7 +492,7 @@ export default AbstractEditController.extend(BloodTypes, ReturnTo, UserSession, 
         }
       });
     }
-    this.send('openModal', `patients.socialwork.${route}`, model);
+    this.send('openModal', `hospital.patients.socialwork.${route}`, model);
   },
 
   _getVisitCollection(name) {

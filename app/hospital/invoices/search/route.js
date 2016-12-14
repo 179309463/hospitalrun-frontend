@@ -1,6 +1,6 @@
 import AbstractSearchRoute from 'hospitalrun/routes/abstract-search-route';
 export default AbstractSearchRoute.extend({
-  moduleName: 'invoices',
+  moduleName: 'hospital.invoices',
   searchKeys: [{
     name: 'externalInvoiceNumber',
     type: 'contains'

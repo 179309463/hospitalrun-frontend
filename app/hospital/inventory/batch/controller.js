@@ -6,7 +6,7 @@ import Ember from 'ember';
 import { translationMacro as t } from 'ember-i18n';
 export default AbstractEditController.extend(InventoryId, InventoryLocations, InventorySelection, {
   doingUpdate: false,
-  inventoryController: Ember.inject.controller('inventory'),
+  inventoryController: Ember.inject.controller('hospital/inventory'),
   inventoryItems: null,
   warehouseList: Ember.computed.alias('inventoryController.warehouseList'),
   aisleLocationList: Ember.computed.alias('inventoryController.aisleLocationList'),
@@ -80,7 +80,7 @@ export default AbstractEditController.extend(InventoryId, InventoryLocations, In
         quantity: 0, // Needed for validation purposes
         skipSavePurchase: true
       });
-      this.send('openModal', 'inventory.quick-add', inventoryItem);
+      this.send('openModal', 'hospital.inventory.quick-add', inventoryItem);
     }.bind(this));
   },
 
