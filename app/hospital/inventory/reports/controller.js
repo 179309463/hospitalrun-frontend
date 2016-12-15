@@ -1,4 +1,4 @@
-import AbstractReportController from 'hospitalrun/controllers/abstract-report-controller';
+import AbstractReportController from 'hospitalrun/application/controllers/abstract-report-controller';
 import Ember from 'ember';
 import InventoryAdjustmentTypes from 'hospitalrun/mixins/inventory-adjustment-types';
 import LocationName from 'hospitalrun/mixins/location-name';

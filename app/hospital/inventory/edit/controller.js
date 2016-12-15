@@ -1,4 +1,4 @@
-import AbstractEditController from 'hospitalrun/controllers/abstract-edit-controller';
+import AbstractEditController from 'hospitalrun/application/controllers/abstract-edit-controller';
 import Ember from 'ember';
 import InventoryLocations from 'hospitalrun/mixins/inventory-locations';
 import InventoryTypeList from 'hospitalrun/mixins/inventory-type-list';

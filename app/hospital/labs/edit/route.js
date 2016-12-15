@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import AbstractEditRoute from 'hospitalrun/routes/abstract-edit-route';
+import AbstractEditRoute from 'hospitalrun/application/routes/abstract-edit-route';
 import ChargeRoute from 'hospitalrun/mixins/charge-route';
 import PatientListRoute from 'hospitalrun/mixins/patient-list-route';
 import { translationMacro as t } from 'ember-i18n';

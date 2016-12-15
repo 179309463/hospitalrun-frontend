@@ -1,4 +1,4 @@
-import AbstractModuleRoute from 'hospitalrun/routes/abstract-module-route';
+import AbstractModuleRoute from 'hospitalrun/application/routes/abstract-module-route';
 export default AbstractModuleRoute.extend({
   addCapability: 'add_visit',
   additionalModels: [{

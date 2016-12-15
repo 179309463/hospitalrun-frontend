@@ -1,4 +1,4 @@
-import AbstractSearchRoute from 'hospitalrun/routes/abstract-search-route';
+import AbstractSearchRoute from 'hospitalrun/application/routes/abstract-search-route';
 export default AbstractSearchRoute.extend({
   moduleName: 'hospital.pricing',
   searchKeys: [{

@@ -1,4 +1,4 @@
-import AbstractModuleRoute from 'hospitalrun/routes/abstract-module-route';
+import AbstractModuleRoute from 'hospitalrun/application/routes/abstract-module-route';
 import ModalHelper from 'hospitalrun/mixins/modal-helper';
 import PatientListRoute from 'hospitalrun/mixins/patient-list-route';
 

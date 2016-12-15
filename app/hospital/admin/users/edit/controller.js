@@ -1,4 +1,4 @@
-import AbstractEditController from 'hospitalrun/controllers/abstract-edit-controller';
+import AbstractEditController from 'hospitalrun/application/controllers/abstract-edit-controller';
 import Ember from 'ember';
 import UserRoles from 'hospitalrun/mixins/user-roles';
 import uuid from 'npm:uuid';

@@ -1,4 +1,4 @@
-import AbstractEditRoute from 'hospitalrun/routes/abstract-edit-route';
+import AbstractEditRoute from 'hospitalrun/application/routes/abstract-edit-route';
 import Ember from 'ember';
 import PatientId from 'hospitalrun/mixins/patient-id';
 import PatientVisits from 'hospitalrun/mixins/patient-visits';

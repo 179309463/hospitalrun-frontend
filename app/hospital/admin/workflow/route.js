@@ -1,4 +1,4 @@
-import AbstractEditRoute from 'hospitalrun/routes/abstract-edit-route';
+import AbstractEditRoute from 'hospitalrun/application/routes/abstract-edit-route';
 import { translationMacro as t } from 'ember-i18n';
 export default AbstractEditRoute.extend({
   hideNewButton: true,

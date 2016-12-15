@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import AbstractEditController from 'hospitalrun/controllers/abstract-edit-controller';
+import AbstractEditController from 'hospitalrun/application/controllers/abstract-edit-controller';
 export default AbstractEditController.extend({
   visitsController: Ember.inject.controller('hospital/visits'),
   diagnosisList: Ember.computed.alias('visitsController.diagnosisList'),

@@ -1,4 +1,4 @@
-import AbstractEditController from 'hospitalrun/controllers/abstract-edit-controller';
+import AbstractEditController from 'hospitalrun/application/controllers/abstract-edit-controller';
 import Ember from 'ember';
 import LabPricingTypes from 'hospitalrun/mixins/lab-pricing-types';
 import ImagingPricingTypes from 'hospitalrun/mixins/imaging-pricing-types';

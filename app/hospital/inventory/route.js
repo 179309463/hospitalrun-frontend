@@ -1,4 +1,4 @@
-import AbstractModuleRoute from 'hospitalrun/routes/abstract-module-route';
+import AbstractModuleRoute from 'hospitalrun/application/routes/abstract-module-route';
 import FulfillRequest from 'hospitalrun/mixins/fulfill-request';
 import InventoryId from 'hospitalrun/mixins/inventory-id';
 import InventoryLocations from 'hospitalrun/mixins/inventory-locations'; // inventory-locations mixin is needed for fulfill-request mixin!

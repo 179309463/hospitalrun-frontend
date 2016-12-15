@@ -1,4 +1,4 @@
-import AbstractEditController from 'hospitalrun/controllers/abstract-edit-controller';
+import AbstractEditController from 'hospitalrun/application/controllers/abstract-edit-controller';
 import AppointmentStatuses from 'hospitalrun/mixins/appointment-statuses';
 import Ember from 'ember';
 import PatientSubmodule from 'hospitalrun/mixins/patient-submodule';

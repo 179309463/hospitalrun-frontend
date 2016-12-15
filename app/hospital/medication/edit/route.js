@@ -1,5 +1,5 @@
 import { translationMacro as t } from 'ember-i18n';
-import AbstractEditRoute from 'hospitalrun/routes/abstract-edit-route';
+import AbstractEditRoute from 'hospitalrun/application/routes/abstract-edit-route';
 import Ember from 'ember';
 import FulfillRequest from 'hospitalrun/mixins/fulfill-request';
 import InventoryLocations from 'hospitalrun/mixins/inventory-locations'; // inventory-locations mixin is needed for fulfill-request mixin!

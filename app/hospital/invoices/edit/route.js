@@ -1,4 +1,4 @@
-import AbstractEditRoute from 'hospitalrun/routes/abstract-edit-route';
+import AbstractEditRoute from 'hospitalrun/application/routes/abstract-edit-route';
 import Ember from 'ember';
 export default AbstractEditRoute.extend({
   editTitle: 'Edit Invoice',

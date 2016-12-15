@@ -1,4 +1,4 @@
-import AbstractIndexRoute from 'hospitalrun/routes/abstract-index-route';
+import AbstractIndexRoute from 'hospitalrun/application/routes/abstract-index-route';
 import Ember from 'ember';
 import UserSession from 'hospitalrun/mixins/user-session';
 export default AbstractIndexRoute.extend(UserSession, {

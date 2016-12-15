@@ -1,4 +1,4 @@
-import AbstractPagedController from 'hospitalrun/controllers/abstract-paged-controller';
+import AbstractPagedController from 'hospitalrun/application/controllers/abstract-paged-controller';
 import PatientVisits from 'hospitalrun/mixins/patient-visits';
 export default AbstractPagedController.extend(PatientVisits, {
   addPermission: 'add_patient',

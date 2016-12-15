@@ -1,4 +1,4 @@
-import AbstractDeleteController from 'hospitalrun/controllers/abstract-delete-controller';
+import AbstractDeleteController from 'hospitalrun/application/controllers/abstract-delete-controller';
 import PatientVisitsMixin from 'hospitalrun/mixins/patient-visits';
 import PatientAppointmentsMixin from 'hospitalrun/mixins/patient-appointments';
 import PatientInvoicesMixin from 'hospitalrun/mixins/patient-invoices';

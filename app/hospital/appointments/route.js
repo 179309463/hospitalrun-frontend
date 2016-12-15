@@ -1,4 +1,4 @@
-import AbstractModuleRoute from 'hospitalrun/routes/abstract-module-route';
+import AbstractModuleRoute from 'hospitalrun/application/routes/abstract-module-route';
 import UserSession from 'hospitalrun/mixins/user-session';
 import { translationMacro as t } from 'ember-i18n';
 

@@ -1,4 +1,4 @@
-import AbstractDeleteController from 'hospitalrun/controllers/abstract-delete-controller';
+import AbstractDeleteController from 'hospitalrun/application/controllers/abstract-delete-controller';
 import { translationMacro as t } from 'ember-i18n';
 export default AbstractDeleteController.extend({
   title: t('labels.deleteUser'),

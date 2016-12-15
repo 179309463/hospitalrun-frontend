@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import AbstractReportController from 'hospitalrun/controllers/abstract-report-controller';
+import AbstractReportController from 'hospitalrun/application/controllers/abstract-report-controller';
 import PatientDiagnosis from 'hospitalrun/mixins/patient-diagnosis';
 import PatientVisits from 'hospitalrun/mixins/patient-visits';
 import SelectValues from 'hospitalrun/utils/select-values';
