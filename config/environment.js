@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'hospitalrun',
+    podModulePrefix: 'hospitalrun/pods',
     environment: environment,
     rootURL: '/',
     locationType: 'hash', // Using hash location type because it is more friendly for offline.

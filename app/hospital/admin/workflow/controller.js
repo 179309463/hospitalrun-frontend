@@ -1,9 +1,0 @@
-import AbstractEditController from 'hospitalrun/application/controllers/abstract-edit-controller';
-export default AbstractEditController.extend({
-  hideCancelButton: true,
-  updateCapability: 'update_config',
-
-  afterUpdate() {
-    this.displayAlert(this.get('i18n').t('admin.workflow.titles.optionsSaved'), this.get('i18n').t('admin.workflow.messages.optionsSaved'));
-  }
-});
