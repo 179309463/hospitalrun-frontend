@@ -117,7 +117,7 @@ export default Ember.Route.extend(UserSession, AuthenticatedRouteMixin, {
   },
 
   renderTemplate() {
-    this.render('section');
+    this.render('application/templates/abstract-module-route');
   },
 
   setupController(controller, model) {

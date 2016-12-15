@@ -1,5 +1,15 @@
 {{#if userCanAdd}}
-  {{partial 'render-typeahead'}}
+  {{#if usePricingTypeAhead}}
+    {{pricing-typeahead class=className property=property 
+      label=label content=content
+      selection=selection
+    }}
+  {{else}}
+    {{type-ahead class=className property=property 
+      label=label content=content
+      selection=selection setOnBlur=setOnBlur hint=hint
+    }}
+  {{/if}}
 {{else}}
   {{em-select class=className label=label
     property=property content=content

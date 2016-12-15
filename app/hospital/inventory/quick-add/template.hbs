@@ -5,6 +5,6 @@
     updateButtonText=updateButtonText }}
   <div class="alert alert-warning" role="alert">{{t 'inventory.messages.itemNotFound' item=model.name}}</div>
   {{#em-form model=model submitButton=false }}
-    {{partial 'inventory-basic'}}
+    {{partial 'hospital/inventory/form'}}
   {{/em-form}}
 {{/modal-dialog}}

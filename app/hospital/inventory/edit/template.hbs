@@ -1,9 +1,9 @@
 {{#edit-panel editPanelProps=editPanelProps}}
   {{#em-form model=model submitButton=false }}
-    {{partial 'inventory-basic'}}
+    {{partial 'hospital/inventory/form'}}
     {{#if model.isNew}}
       <h3>{{t 'inventory.labels.purchaseInfo'}}</h3>
-      {{partial 'inv-purchase'}}
+      {{partial 'hospital/inventory/purchase/form'}}
     {{else}}
       {{#if quantityDiscrepency}}
         <div class="alert alert-danger alert-dismissible" role="alert">

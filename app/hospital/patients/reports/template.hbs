@@ -105,7 +105,21 @@
             </th>
           {{/each}}
         </tr>
-        {{partial "report-rows"}}
+        {{#each currentReportRows as |reportRow|}}
+          {{#if reportRow.rowAction}}
+            <tr {{action reportRow.rowAction.action reportRow.rowAction.model}}>
+              {{#each reportRow.row as |column|}}
+                <td>{{array-display content=column }}</td>
+              {{/each}}
+            </tr>
+          {{else}}
+            <tr>
+              {{#each reportRow as |column|}}
+                <td>{{array-display content=column }}</td>
+              {{/each}}
+            </tr>
+          {{/if}}
+        {{/each}}
       </table>
     </div>
     <div class="panel-footer">
